@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * @date 2021/1/9
  * @author mxb
- * @desc
+ * @desc 动画入口类
  * @desired
  */
 class AnimationMainActivity : AppCompatActivity() {
@@ -34,5 +34,13 @@ class AnimationMainActivity : AppCompatActivity() {
     override fun finish() {
         super.finish()
         overridePendingTransition(R.anim.enter_anim, R.anim.exit_anim)
+    }
+
+    fun evaluator(view: View) {
+        startActivity(Intent(this, EvaluatorActivity::class.java))
+    }
+
+    fun interpolator(view: View) {
+        startActivity(Intent(this, InterpolatorActivity::class.java))
     }
 }

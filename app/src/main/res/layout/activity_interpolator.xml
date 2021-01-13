@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:background="#ff0000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="accelerateDecelerateInterpolator"
+            android:padding="10dp"
+            android:text="AccelerateDecelerateInterpolator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="accelerateInterpolator"
+            android:padding="10dp"
+            android:text="AccelerateInterpolator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="anticipateInterpolator"
+            android:padding="10dp"
+            android:text="AnticipateInterpolator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="anticipateOvershootInterpolator"
+            android:padding="10dp"
+            android:text="AnticipateOvershootInterpolator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="bounceInterpolator"
+            android:padding="10dp"
+            android:text="BounceInterpolator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="cycleInterpolator"
+            android:padding="10dp"
+            android:text="CycleInterpolator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="decelerateInterpolator"
+            android:padding="10dp"
+            android:text="DecelerateInterpolator"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="overshootInterpolator"
+            android:padding="10dp"
+            android:text="OvershootInterpolator"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAnimation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="#ff0000"
+        android:padding="10dp"
+        android:text="执行动画的View"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

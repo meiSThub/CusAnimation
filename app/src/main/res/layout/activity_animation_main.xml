@@ -28,4 +28,19 @@
         android:text="propertyAnimation"
         android:textAllCaps="false" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="interpolator"
+        android:padding="10dp"
+        android:text="插值器"
+        android:textAllCaps="false" />
+  <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="evaluator"
+        android:padding="10dp"
+        android:text="自定义估值器"
+        android:textAllCaps="false" />
+
 </LinearLayout>

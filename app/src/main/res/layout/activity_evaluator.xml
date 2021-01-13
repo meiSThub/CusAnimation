@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="evaluator"
+        android:padding="10dp"
+        android:text="自定义估值器" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="viewWrapper"
+        android:padding="10dp"
+        android:text="viewWrapper"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="valueAnimator"
+        android:padding="10dp"
+        android:text="valueAnimator实现属性动画"
+        android:textAllCaps="false" />
+
+</LinearLayout>
