@@ -47,4 +47,8 @@ class AnimationMainActivity : AppCompatActivity() {
     fun flower(view: View) {
         startActivity(Intent(this, FlowerAnimationActivity::class.java))
     }
+
+    fun taobao(view: View) {
+        startActivity(Intent(this, TaoBaoDetailActivity::class.java))
+    }
 }

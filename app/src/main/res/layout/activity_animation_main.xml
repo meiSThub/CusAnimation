@@ -35,7 +35,8 @@
         android:padding="10dp"
         android:text="插值器"
         android:textAllCaps="false" />
-  <Button
+
+    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="evaluator"
@@ -49,6 +50,14 @@
         android:onClick="flower"
         android:padding="10dp"
         android:text="刷鲜花动画"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="taobao"
+        android:padding="10dp"
+        android:text="仿淘宝详情页动画"
         android:textAllCaps="false" />
 
 </LinearLayout>
