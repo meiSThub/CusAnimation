@@ -21,6 +21,7 @@
         <activity android:name=".PropertyAnimationActivity" />
         <activity android:name=".EvaluatorActivity" />
         <activity android:name=".InterpolatorActivity" />
+        <activity android:name=".FlowerAnimationActivity" />
     </application>
 
 </manifest>

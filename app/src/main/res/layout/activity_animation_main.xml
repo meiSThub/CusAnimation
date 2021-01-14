@@ -43,4 +43,12 @@
         android:text="自定义估值器"
         android:textAllCaps="false" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="flower"
+        android:padding="10dp"
+        android:text="刷鲜花动画"
+        android:textAllCaps="false" />
+
 </LinearLayout>

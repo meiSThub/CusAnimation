@@ -43,4 +43,8 @@ class AnimationMainActivity : AppCompatActivity() {
     fun interpolator(view: View) {
         startActivity(Intent(this, InterpolatorActivity::class.java))
     }
+
+    fun flower(view: View) {
+        startActivity(Intent(this, FlowerAnimationActivity::class.java))
+    }
 }
