@@ -23,6 +23,7 @@
         <activity android:name=".InterpolatorActivity" />
         <activity android:name=".FlowerAnimationActivity" />
         <activity android:name=".TaoBaoDetailActivity" />
+        <activity android:name=".splash.SplashActivity" />
     </application>
 
 </manifest>

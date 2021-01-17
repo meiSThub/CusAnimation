@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.mei.animation.splash.SplashActivity
 
 /**
  * @date 2021/1/9
@@ -50,5 +51,9 @@ class AnimationMainActivity : AppCompatActivity() {
 
     fun taobao(view: View) {
         startActivity(Intent(this, TaoBaoDetailActivity::class.java))
+    }
+
+    fun splashLoading(view: View) {
+        startActivity(Intent(this, SplashActivity::class.java))
     }
 }
