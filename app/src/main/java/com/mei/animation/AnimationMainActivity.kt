@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.mei.animation.cuslayoutanimation.AnimationFrameActivity
 import com.mei.animation.splash.SplashActivity
 
 /**
@@ -55,5 +56,9 @@ class AnimationMainActivity : AppCompatActivity() {
 
     fun splashLoading(view: View) {
         startActivity(Intent(this, SplashActivity::class.java))
+    }
+
+    fun animationFrame(view: View) {
+        startActivity(Intent(this, AnimationFrameActivity::class.java))
     }
 }

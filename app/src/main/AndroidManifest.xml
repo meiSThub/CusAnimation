@@ -24,6 +24,7 @@
         <activity android:name=".FlowerAnimationActivity" />
         <activity android:name=".TaoBaoDetailActivity" />
         <activity android:name=".splash.SplashActivity" />
+        <activity android:name=".cuslayoutanimation.AnimationFrameActivity" />
     </application>
 
 </manifest>

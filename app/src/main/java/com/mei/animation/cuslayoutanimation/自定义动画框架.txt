@@ -1,0 +1,1 @@
+自定义实现类似ListView的layoutAnimation的动画效果
