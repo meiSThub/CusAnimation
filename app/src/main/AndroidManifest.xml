@@ -26,6 +26,7 @@
         <activity android:name=".splash.SplashActivity" />
         <activity android:name=".cuslayoutanimation.AnimationFrameActivity" />
         <activity android:name=".viewpager3danimation.ViewPager3DAnimationActivity" />
+        <activity android:name="com.mei.parallel.ParallelActivity" />
     </application>
 
 </manifest>

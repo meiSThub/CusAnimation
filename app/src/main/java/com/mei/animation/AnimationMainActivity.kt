@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.mei.animation.cuslayoutanimation.AnimationFrameActivity
 import com.mei.animation.splash.SplashActivity
 import com.mei.animation.viewpager3danimation.ViewPager3DAnimationActivity
+import com.mei.parallel.ParallelActivity
 
 /**
  * @date 2021/1/9
@@ -65,5 +66,9 @@ class AnimationMainActivity : AppCompatActivity() {
 
     fun viewpager3danimation(view: View) {
         startActivity(Intent(this, ViewPager3DAnimationActivity::class.java))
+    }
+
+    fun parallel(view: View) {
+        startActivity(Intent(this, ParallelActivity::class.java))
     }
 }
