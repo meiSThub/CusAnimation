@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.mei.animation.cuslayoutanimation.AnimationFrameActivity
 import com.mei.animation.splash.SplashActivity
+import com.mei.animation.viewpager3danimation.ViewPager3DAnimationActivity
 
 /**
  * @date 2021/1/9
@@ -60,5 +61,9 @@ class AnimationMainActivity : AppCompatActivity() {
 
     fun animationFrame(view: View) {
         startActivity(Intent(this, AnimationFrameActivity::class.java))
+    }
+
+    fun viewpager3danimation(view: View) {
+        startActivity(Intent(this, ViewPager3DAnimationActivity::class.java))
     }
 }

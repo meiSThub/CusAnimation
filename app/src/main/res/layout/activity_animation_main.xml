@@ -76,4 +76,12 @@
         android:text="自定义动画框架"
         android:textAllCaps="false" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="viewpager3danimation"
+        android:padding="10dp"
+        android:text="viewpager的3D动画"
+        android:textAllCaps="false" />
+
 </LinearLayout>

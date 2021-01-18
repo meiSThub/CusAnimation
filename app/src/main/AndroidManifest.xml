@@ -25,6 +25,7 @@
         <activity android:name=".TaoBaoDetailActivity" />
         <activity android:name=".splash.SplashActivity" />
         <activity android:name=".cuslayoutanimation.AnimationFrameActivity" />
+        <activity android:name=".viewpager3danimation.ViewPager3DAnimationActivity" />
     </application>
 
 </manifest>
