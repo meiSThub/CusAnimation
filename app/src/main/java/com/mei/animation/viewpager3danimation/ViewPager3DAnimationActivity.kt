@@ -23,7 +23,8 @@ class ViewPager3DAnimationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_viewpager_3d_animation)
         viewPager = findViewById(R.id.view_pager)
-        viewPager?.setPageTransformer(true, WelcomePageTransformer())
+//        viewPager?.setPageTransformer(true, WelcomePageTransformer())
+        viewPager?.setPageTransformer(true, PageChildTransformer())
         viewPager?.adapter = object : FragmentPagerAdapter(supportFragmentManager) {
             override fun getItem(position: Int): Fragment {
                 val fragment = TranslateFragment()
