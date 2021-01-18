@@ -116,18 +116,17 @@ class ParallelTransformer : ViewPager.PageTransformer, ViewPager.OnPageChangeLis
 
                 Log.i(TAG, "transformPage: width=${bgImageView2.width.toFloat()}")
 
-                var translation2 =
-                    ObjectAnimator.ofFloat(
-                        bgImageView2,
-                        "translationX",
-                        bgImageView2.width.toFloat(),
-                        0f
-                    )
+                var translation2 = ObjectAnimator.ofFloat(
+                    bgImageView2,
+                    "translationX",
+                    bgImageView2.width.toFloat(),
+                    0f
+                )
                 translation2.duration = mDuration
                 translation2.interpolator = LinearInterpolator()
 
                 animatorSet.playTogether(translation1, translation2)
-                animatorSet.startDelay = 400
+                animatorSet.startDelay = 200
                 animatorSet.start()
 
                 // 动画执行完，恢复状态
