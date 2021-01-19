@@ -1,8 +1,6 @@
 package com.mei.parallel
 
-import android.animation.AnimatorSet
-import android.animation.ArgbEvaluator
-import android.animation.ObjectAnimator
+import android.animation.*
 import android.util.Log
 import android.view.View
 import android.view.animation.LinearInterpolator
@@ -32,9 +30,6 @@ class ParallelTransformer : ViewPager.PageTransformer, ViewPager.OnPageChangeLis
 
     // 动画执行的时间
     private val mDuration = 400L
-
-    // 动画集合
-    private val animatorSet = AnimatorSet()
 
     /**
      * 此方法是滑动的时候每一个页面View都会调用该方法
@@ -96,7 +91,11 @@ class ParallelTransformer : ViewPager.PageTransformer, ViewPager.OnPageChangeLis
             Log.i(TAG, "transformPage: position=$position mPageAlreadyChanged=$mPageAlreadyChanged")
             if (mPageAlreadyChanged) {
 
-                animatorSet.cancel() // 取消之前的动画
+                val animatorSet = AnimatorSet()
+                Log.i(
+                    TAG,
+                    "transformPage: 执行动画前 pageIndex=$pageIndex bg1TranslationX=${bgImageView1.translationX} bg2TranslationX=${bgImageView2.translationX}"
+                )
 
                 // 当页面选中了，执行页面内部背景切换动画
                 var translation1 = ObjectAnimator.ofFloat(
@@ -127,18 +126,35 @@ class ParallelTransformer : ViewPager.PageTransformer, ViewPager.OnPageChangeLis
 
                 animatorSet.playTogether(translation1, translation2)
                 animatorSet.startDelay = 200
+                animatorSet.addListener(object : AnimatorListenerAdapter() {
+                    override fun onAnimationEnd(animation: Animator?) {
+                        super.onAnimationEnd(animation)
+                        Log.i(
+                            TAG,
+                            "transformPage: 动画结束前：pageIndex=$pageIndex bg1TranslationX=${bgImageView1.translationX} bg2TranslationX=${bgImageView2.translationX}"
+                        )
+                    }
+                })
                 animatorSet.start()
 
                 // 动画执行完，恢复状态
                 mPageAlreadyChanged = false
             }
         } else if (position >= 1f || position <= -1f) {
-            Log.i(TAG, "transformPage: 动画复原 pageIndex=$pageIndex")
+            Log.i(
+                TAG,
+                "transformPage: 动画复原前：pageIndex=$pageIndex bg1TranslationX=${bgImageView1.translationX} bg2TranslationX=${bgImageView2.translationX}"
+            )
             // 3. 复原所有的动画
             bgImageView1.translationX = 0f
             bgImageView2.translationX = 0f
             bgImageView2.visibility = View.INVISIBLE
             scrollView.smoothScrollTo(0, 0)
+
+            Log.i(
+                TAG,
+                "transformPage: 动画复原后：pageIndex=$pageIndex bg1TranslationX=${bgImageView1.translationX} bg2TranslationX=${bgImageView2.translationX}"
+            )
         } else if (position < 1 && position > -1) { //(-1~1)
             // 4. 滑动页面的时候，执行页面背景的旋转动画，为了让页面之间的切换更加无缝衔接，
             // 这里让每个页面内部的背景来执行旋转动画，而页面本身就还是保持ViewPager默认的切换动画，
